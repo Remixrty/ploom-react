@@ -1,23 +1,20 @@
 import React from 'react'
 
 export default function Map() {
-    // ymaps.ready(init);
-    // function init() {
-    //     // Создание карты.
-    //     const myMap = new ymaps.Map("map", {
-    //         // Координаты центра карты.
-    //         // Порядок по умолчанию: «широта, долгота».
-    //         // Чтобы не определять координаты центра карты вручную,
-    //         // воспользуйтесь инструментом Определение координат.
-    //         center: [55.76, 37.64],
-    //         // Уровень масштабирования. Допустимые значения:
-    //         // от 0 (весь мир) до 19.
-    //         zoom: 7
-    //     });
-    // }
+
     return (
         <>
-            <div id="map" style="width: 600px; height: 400px"></div>
+           <div class="shops-map">
+            <div class="shops-map__map-wrapper" id="ymap">
+                <div class="shops-map__overlay" data-map-overlay></div>
+                <ul class="shops-map__legend">
+                    <li class="shops-map__legend-item shops-map__legend-item_brand">Фирменный павильон Plus lounge
+                    </li>
+                    <li class="shops-map__legend-item">Точка продаж</li>
+                </ul>
+            </div>
+            <div class="shops-map__list-wrapper" data-shops-list></div>
+        </div>
         </>
     )
 }

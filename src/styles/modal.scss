@@ -23,6 +23,22 @@
     pointer-events: all;
 }
 
+.head__modal {
+    @include md {
+        display: none;
+    }
+
+    &_mobile {
+        display: none;
+        padding: 20px 16px;
+
+        @include md {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+
 .modalform {
     padding: 32px 32px 20px 32px;
     width: 640px;
@@ -30,6 +46,8 @@
     height: 530px;
     background: #FFFFFF;
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
 
     @include md {
         width: 100%;
@@ -41,12 +59,16 @@
 
     &__form {
         margin-top: 24px;
+
+        @include md {
+            margin: 0;
+        }
     }
 
     &__menu {
         margin-top: 12px;
         padding: 12px 0;
-        max-height: 332px;
+        // max-height: 332px;
         overflow-y: scroll;
 
         &::-webkit-scrollbar {
@@ -64,7 +86,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-
+        width: 100%;
     }
 
     &__choose {
@@ -79,6 +101,7 @@
         padding: 12px;
         display: flex;
         justify-content: space-between;
+        align-items: center;
 
         &:hover {
             background: #EFF8FF;

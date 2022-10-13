@@ -4,6 +4,8 @@ import { ReactComponent as SearchIcon } from '../img/Search_icon.svg'
 import { ReactComponent as DoneIcon } from '../img/Done.svg'
 import '../styles/base/fonts.css'
 import cities from '../cities.json'
+import { ReactComponent as CloseIcon } from '../img/Close_icon.svg'
+
 
 export default function ModalSearch({ active, setActive, city, setCity }) {
     const [focusSearchModal, setFocusSearchModal] = useState(false)
@@ -32,36 +34,44 @@ export default function ModalSearch({ active, setActive, city, setCity }) {
         <>
             <div className={active ? "modal active" : "modal"} onClick={e => closeForm(e)}>
                 <div className='modalform' onClick={e => e.stopPropagation()}>
-                    <h1 className='text-content__modal-h1'>Выберите населенный пункт</h1>
-                    <div className='modalform__form'>
-                        <div className="superfield superfield_search" onClick={() => setFocusSearchModal(true)}>
-                            <div className="superfield__left">
-                                <div className="superfield__search-icon">
-                                    <SearchIcon />
-                                </div>
-                                <div className="superfield__inputfield">
-                                    <input type="text" className="superfield__input" id="searchModal" placeholder="Поиск" onChange={e => search(e.target.value)} />
+                    
+                        <div className="head__modal">
+                            <h1 className='text-content__modal-h1'>Выберите населенный пункт</h1>
+                        </div>
+                        <div className='filter-modal__head'>
+                            <h1 className='text-content__h1_modal'>Населенный пункт</h1>
+                            <CloseIcon onClick={e => closeForm(e)} />
+                        </div>
+                        <div className="filter-modal__item">
+                        <div className='modalform__form'>
+                            <div className="superfield superfield_search" onClick={() => setFocusSearchModal(true)}>
+                                <div className="superfield__left">
+                                    <div className="superfield__search-icon">
+                                        <SearchIcon />
+                                    </div>
+                                    <div className="superfield__inputfield">
+                                        <input type="text" className="superfield__input" id="searchModal" placeholder="Поиск" onChange={e => search(e.target.value)} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div className='modalform__menu'>
-                        {
-                            searchCities?.length > 0 ?
-                                searchCities.slice(0, 10).map(item => {
-                                    return <div key={item.city} className='modalform__item' onClick={() => setCity(item)}>
-                                        <div className='modalform__content'>
-                                            <div className='text-content_input'> {item.city} </div>
-                                            <div className='text-content_overline'> {item.state} </div>
+                        <div className='modalform__menu'>
+                            {
+                                searchCities?.length > 0 ?
+                                    searchCities.slice(0, 20).map(item => {
+                                        return <div key={item.city} className='modalform__item' onClick={() => setCity(item)}>
+                                            <div className='modalform__content'>
+                                                <div className='text-content_input'> {item.city} </div>
+                                                <div className='text-content_overline'> {item.state} </div>
+                                            </div>
+                                            {city.name == item.name ? <div className='modalform__choose'><DoneIcon /></div> : null}
                                         </div>
-                                        {city.name == item.name ? <div className='modalform__choose'><DoneIcon /></div> : null}
-                                    </div>
-                                })
-                                :
-                                <div className='text-content_input'>Ничего не найдено. Попробуйте снова.</div>
-                        }
+                                    })
+                                    :
+                                    <div className='text-content_input'>Ничего не найдено. Попробуйте снова.</div>
+                            }
+                        </div>
                     </div>
-
                 </div>
 
 

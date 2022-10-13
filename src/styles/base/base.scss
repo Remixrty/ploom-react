@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: column;
 
-   
+
 
     @include lg {
         width: 856px;
@@ -36,7 +36,7 @@
     justify-content: space-between;
     margin-bottom: 20px;
 
-    
+
     @include md {
         display: none;
     }

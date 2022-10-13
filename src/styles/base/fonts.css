@@ -117,6 +117,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 26px;
+    width: 100%;
 }
 
 .text-content__filter-head_light {

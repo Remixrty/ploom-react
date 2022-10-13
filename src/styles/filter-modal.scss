@@ -12,30 +12,88 @@
     z-index: 98;
     transition: 0.3s all ease;
     pointer-events: none;
-    padding: 16px;
+    padding: 69px 16px 16px 16px;
+    overflow: scroll;
+    &::-webkit-scrollbar {
+        width: 6px;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #D9E0E3;
+        border-radius: 10px;
+    }
 
     &_active {
         opacity: 1;
         transition: 0.5s all ease-out;
         pointer-events: all;
     }
+
+    &__superfield {
+        padding: 12px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__checkbox {
+        border: 1px solid #CFD5D8;
+        border-radius: 50%;
+        min-width: 20px;
+        min-height: 20px;
+    }
+
+    &__service-container {
+        display: flex;
+        padding: 20px;
+        background: #F8F8F8;
+        border-radius: 12px;
+        width: 100%;
+        margin-top: 8px;
+
+        svg {
+            min-width: 42px;
+            margin-right: 16px;
+        }
+    }
 }
 
 .filter-modal__head {
-    display: flex;
-    width: 100%;
+    display: none;
 
-    padding-bottom: 24px;
-    justify-content: space-between;
-    align-items: center;
-    height: auto;
+
+    @include md {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        height: auto;
+    }
+
+    &_fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 16px 16px 24px 16px;
+        background-color: #fff;
+    }
 }
 
 .filter-modal__item {
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid #E7EAEB;
-    padding-bottom: 20px;
+    padding: 24px 0;
+    overflow: hidden;
+
+    &:first {
+        padding-top: 0;
+    }
+
+    svg {
+        min-width: 32px;
+        margin-right: 12px;
+    }
 
     &-name {
         align-items: flex-start;
@@ -43,5 +101,11 @@
 
     &-content {
         align-self: center;
+        display: flex;
+        flex-direction: column;
     }
+}
+
+.disable {
+    display: none;
 }
