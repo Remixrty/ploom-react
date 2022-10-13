@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.text-content__h1 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 160%;
+    color: #0F2F3B;
+    display: flex;
+}
+
+.text-content__h1_mobile {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: justify;
+    color: #0F2F3B;
+}
+
+
+
+.text-content__h1_underline {
+    border-bottom: dashed #6F8289;
+    cursor: pointer;
+    transition: 0.3s all ease;
+
+}
+
+.text-content__h1_underline:hover {
+    transition: 0.3s all ease;
+    color: #3567FF;
+    border-bottom: dashed #3567FF;
+
+}
+
+.text-content__h1_modal {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #0F2F3B;
+}
+
+.text-content_geo {
+    cursor: pointer;
+    padding-left: 8px;
+    color: #3567FF;
+}
+
+.text-content__modal-h1 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 40px;
+    color: #0F2F3B;
+}
+
+.text-content_input {
+    transition: 0.2s all linear;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.text-content_input-light {
+    transition: 0.2s all linear;
+    color: #87979D;
+}
+
+.text-content_button {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.text-content_location {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #3567FF;
+}
+
+.text-content_gray {
+    color: #0F2F3B;
+}
+
+.text-content_light {
+    color: #0F2F3B;
+    opacity: 0.6;
+}
+
+.text-content_overline {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    color: #87979D;
+}
+
+.text-content__filter-head {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.text-content__filter-head_light {
+    color: #87979D;
+}

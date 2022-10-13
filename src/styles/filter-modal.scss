@@ -1,0 +1,47 @@
+@import './mixins/mixins';
+
+.filter-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    opacity: 0;
+    pointer-events: none;
+    height: 100%;
+    width: 100%;
+    z-index: 98;
+    transition: 0.3s all ease;
+    pointer-events: none;
+    padding: 16px;
+
+    &_active {
+        opacity: 1;
+        transition: 0.5s all ease-out;
+        pointer-events: all;
+    }
+}
+
+.filter-modal__head {
+    display: flex;
+    width: 100%;
+
+    padding-bottom: 24px;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+}
+
+.filter-modal__item {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #E7EAEB;
+    padding-bottom: 20px;
+
+    &-name {
+        align-items: flex-start;
+    }
+
+    &-content {
+        align-self: center;
+    }
+}
